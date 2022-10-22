@@ -37,20 +37,26 @@ NO_OF_GUESTS = (
 )
 
 
-OCCASION = (
+EVENT = (
     ('Birthday', 'BIRTHDAY'),
     ('Anniversary', 'ANNIVERSARY'),
     ('Date', 'DATE'),
     ('Business Dinner', 'BUSINESS'),
     ('Hen Party', 'HEN'),
     ('Stag Party', 'STAG'),
-    
+    ('None', 'NONE'),
+
 )
 
 # Create your models here.
-  
+
+
 class Booking(models.Model):
-    Booking_Date =
-    Booking_Time = 
-    No_of_guests =
-    Booking_event = 
+    guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="guest_bookings")
+    name = models.CharField(max_length=50, null=True, blank=True)
+    email_address = models.EmailField(null=True, blank=True),
+    phone = models.IntegerField(null=True, blank=True)
+    booking_date = models.DateField(auto_now=True, blank=False)
+    booking_time = models.TimeField(auto_now=True, choices=TIME, blank=False)
+    no_of_guests = models.CharField(max_length=2, choices=NO_OF_GUESTS, blank=False)
+    booking_event = models.CharField(max_length=50, choices=EVENT, blank=False)
