@@ -60,3 +60,9 @@ class Booking(models.Model):
     booking_time = models.TimeField(auto_now=True, choices=TIME, blank=False)
     no_of_guests = models.CharField(max_length=2, choices=NO_OF_GUESTS, blank=False)
     booking_event = models.CharField(max_length=50, choices=EVENT, blank=False)
+
+    class Meta:
+        ordering = ['-created_on']
+        
+    def __str__(self):
+        return self.name
