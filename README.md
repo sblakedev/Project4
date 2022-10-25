@@ -18,6 +18,10 @@ Testing
 Deployment
 Credits
 
+Username = admin
+email address = admin@saoirsesburgers.ie
+password = cheese2658
+
 Site Goals
 Allow user to create an account with the restaurant
 Allow user to make a booking at the restaurant
