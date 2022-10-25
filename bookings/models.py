@@ -74,7 +74,7 @@ class Booking(models.Model):
     def __str__(self):
         return self.name
 
-class CreateAccount(models.Models):
+class CreateAccount(models.Model):
     title = models.CharField(max_length=4, blank=False)
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
