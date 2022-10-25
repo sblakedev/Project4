@@ -38,13 +38,23 @@ NO_OF_GUESTS = (
 
 
 EVENT = (
-    ('Birthday', 'BIRTHDAY'),
-    ('Anniversary', 'ANNIVERSARY'),
-    ('Date', 'DATE'),
-    ('Business Dinner', 'BUSINESS'),
-    ('Hen Party', 'HEN'),
-    ('Stag Party', 'STAG'),
-    ('None', 'NONE'),
+    ('BIRTHDAY', 'Birthday'),
+    ('ANNIVERSARY', 'Anniversary'),
+    ('DATE', 'Date'),
+    ('BUSINESS', 'Business Dinner'),
+    ('HEN', 'Hen Party'),
+    ('STAG', 'Stag Party'),
+    ('NONE', 'None'),
+
+)
+
+
+TITLE = (
+    ('MS', 'Ms'),
+    ('MISS', 'Miss'),
+    ('MRS', 'Mrs'),
+    ('MR', 'Mr'),
+    ('NONE', '--'),
 
 )
 
@@ -63,3 +73,6 @@ class Booking(models.Model):
 
     def __str__(self):
         return self.name
+
+class CreateAccount(models.Models):
+    title = models.Char
