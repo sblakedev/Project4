@@ -14,6 +14,7 @@ Surface
 Planning
 Features
 Resources
+Bugs
 Testing
 Deployment
 Credits
@@ -43,3 +44,7 @@ As a returning user, I want to be able to view my reservations
 As a site owner, I want to be able to view bookings made
 As a site owner, I want to be able to see who edit or cancel reservations
 As a site owner, I want to be able to build a database of customers
+
+
+Bugs
+After creating models, I can't see the email field when creating a new booking in the admin panel.
