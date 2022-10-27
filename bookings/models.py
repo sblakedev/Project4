@@ -66,8 +66,8 @@ class Booking(models.Model):
     name = models.CharField('Name', max_length=50, null=True, blank=False)
     email_address = models.EmailField('Email Address', null=True, blank=True),
     phone = models.CharField('Phone Number', max_length=15, null=True, blank=False)
-    booking_date = models.DateField('Date', auto_now=True, blank=False)
-    booking_time = models.TimeField('Time', auto_now=True, choices=TIME, blank=False)
+    booking_date = models.DateField('Date')
+    booking_time = models.TimeField('Time',choices=TIME, blank=False)
     no_of_guests = models.CharField('Number of Guests', max_length=2, choices=NO_OF_GUESTS, blank=False)
     booking_event = models.CharField('Is this a Special Occasion?', max_length=50, choices=EVENT, blank=False)
 
