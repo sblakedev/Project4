@@ -76,7 +76,7 @@ class Booking(models.Model):
 
 
 class CreateAccount(models.Model):
-    title = models.CharField(max_length=4, blank=False)
+    title = models.CharField(max_length=4, blank=True)
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
     email_address = models.EmailField(blank=True)
