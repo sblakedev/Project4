@@ -62,7 +62,7 @@ TITLE = (
 
 
 class Booking(models.Model):
-    guest = models.ForeignKey(CreateAccount, on_delete=models.CASCADE, related_name="guest_bookings")
+    guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="guest_bookings")
     name = models.CharField('Name', max_length=50, null=True, blank=False)
     email_address = models.EmailField('Email Address', null=True, blank=True),
     phone = models.CharField('Phone Number', max_length=15, null=True, blank=False)
