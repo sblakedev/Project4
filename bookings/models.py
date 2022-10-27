@@ -64,7 +64,7 @@ TITLE = (
 class Booking(models.Model):
     guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="guest_bookings")
     name = models.CharField('Name', max_length=50, null=True, blank=False)
-    email_address = models.EmailField('Email Address', null=True, blank=True),
+    email_address = models.EmailField(null=True, blank=True)
     phone = models.CharField('Phone Number', max_length=15, null=True, blank=False)
     booking_date = models.DateField('Date')
     booking_time = models.TimeField('Time',choices=TIME, blank=False)

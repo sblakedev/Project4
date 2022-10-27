@@ -19,3 +19,5 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+path('bookings_list', views.all_bookings, name="list-bookings"),
