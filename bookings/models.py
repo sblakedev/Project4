@@ -83,4 +83,4 @@ class CreateAccount(models.Model):
     phone_number = models.CharField('Phone Number', max_length=15, blank=False)
 
     def __str__(self):
-        return self.first_name
+        return self.first_name + ' ' + self.last_name
