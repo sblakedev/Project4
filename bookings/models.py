@@ -65,7 +65,7 @@ class Booking(models.Model):
     guest = models.ForeignKey(User, on_delete=models.CASCADE, related_name="guest_bookings")
     name = models.CharField(max_length=50, null=True, blank=False)
     email_address = models.EmailField(null=True, blank=True),
-    phone = models.IntegerField(null=True, blank=False)
+    phone = models.CharField(max_length=15, null=True, blank=False)
     booking_date = models.DateField(auto_now=True, blank=False)
     booking_time = models.TimeField(auto_now=True, choices=TIME, blank=False)
     no_of_guests = models.CharField(max_length=2, choices=NO_OF_GUESTS, blank=False)
@@ -80,7 +80,7 @@ class CreateAccount(models.Model):
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
     email_address = models.EmailField(blank=True)
-    phone_number = models.IntegerField(blank=False)
+    phone_number = models.CharField(max_length=15, blank=False)
 
     def __str__(self):
         return self.first_name
