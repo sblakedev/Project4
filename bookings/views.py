@@ -44,7 +44,7 @@ class LogInPage(generic.DetailView):
         return render(Request, 'log_in.html')
 
 
-class BookPage(ListView):
+class BookPage(generic.DetailView):
     """
     Renders Booking Page View
     """
