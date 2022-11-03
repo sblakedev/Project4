@@ -11,10 +11,10 @@ class HomePage(generic.DetailView):
     Renders Home Page View
     """
 
-    template_name = "index.html"
+    template_name = "home.html"
 
     def get(self, request):
-        return render(request, 'index.html')
+        return render(request, 'home.html')
 
 
 class MenuPage(generic.DetailView):
