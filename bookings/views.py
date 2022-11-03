@@ -53,4 +53,4 @@ class BookPage(generic.DetailView):
     template_name = 'book.html'
 
     def get(self, request):
-        return render(Request, 'book.html')
+        return render(request, 'book.html')
