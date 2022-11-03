@@ -23,7 +23,7 @@ class MenuPage(generic.DetailView):
     """
 
     def get(self, request):
-        return render(Request, 'menu.html')
+        return render(request, 'menu.html')
 
 
 class ContactPage(generic.DetailView):
@@ -32,7 +32,16 @@ class ContactPage(generic.DetailView):
     """
 
     def get(self, request):
-        return render(Request, 'contact.html')
+        return render(request, 'contact.html')
+
+
+class AboutPage(generic.DetailView):
+    """
+    Renders the About Page
+    """
+
+    def get(self, request):
+        return render(request, 'about.html')
 
 
 class LogInPage(generic.DetailView):
@@ -41,7 +50,7 @@ class LogInPage(generic.DetailView):
     """
 
     def get(self, request):
-        return render(Request, 'log_in.html')
+        return render(request, 'log_in.html')
 
 
 class BookPage(generic.DetailView):
