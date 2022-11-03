@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+from .models import Booking, CreateAccount
 
 
 # Create your views here.
@@ -43,10 +44,12 @@ class LogInPage(View):
         return render(Request, 'log_in.html')
 
 
-class BookPage(View):
+class BookPage(ListView):
     """
     Renders Booking Page View
     """
+    model = Booking
+    queryset = Booking.objects.all()
 
     def get(self, request):
         return render(Request, 'book.html')
