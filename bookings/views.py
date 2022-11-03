@@ -17,7 +17,7 @@ class HomePage(generic.DetailView):
         return render(request, 'index.html')
 
 
-class MenuPage(View):
+class MenuPage(generic.DetailView):
     """
     Renders Menu Page View
     """
@@ -26,7 +26,7 @@ class MenuPage(View):
         return render(Request, 'menu.html')
 
 
-class ContactPage(View):
+class ContactPage(generic.DetailView):
     """
     Renders Contact Page View
     """
@@ -35,7 +35,7 @@ class ContactPage(View):
         return render(Request, 'contact.html')
 
 
-class LogInPage(View):
+class LogInPage(generic.DetailView):
     """
     Renders Log In Page View
     """
