@@ -50,6 +50,7 @@ class BookPage(ListView):
     """
     model = Booking
     queryset = Booking.objects.all()
+    template_name = 'book.html'
 
     def get(self, request):
         return render(Request, 'book.html')
