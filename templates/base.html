@@ -1,113 +1,185 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html class="h-100">
+<html lang="en">
 
 <head>
-    <title>Saoirse's Burgers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Saoirse's Burgers</title>
+  <meta content="A homely restaurant with fresh, tasty burgers" name="description">
+  <meta content="lunch, dinner, burgers, restaurant, place to eat, fresh" name="keywords">
 
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy - v1.2.1
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body>
 
-    <!-- Navigation -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Saoirse's Burgers</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Menu</a>
-            <a class="nav-link" href="#">Contact</a>
-            <a class="nav-link" href="#">Log In</a>
-            <a class="nav-link" href="#">Book</a>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        
+        <h1>Saoirse's Burgers<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}#about">About</a></li>
+          <li><a href="{% url 'home' %}#menu">Menu</a></li>
+          <li><a href="{% url 'home' %}#events">Events</a></li>
+          <li><a href="{% url 'home' %}#chefs">Chefs</a></li>
+          <li><a href="{% url 'home' %}#gallery">Gallery</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+
+          <li><a href="{% url 'account_logout' %}">Logout</a></li>
+          <li><a href="{% url 'mybookings_page' %}">My Bookings</a></li>
+
+          <li><a href="{% url 'create_account' %}">Create Account</a></li>
+          <li><a href="{% url 'account_login' %}">Login</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <a class="btn-book-a-table" href="{% 'book' %}">Book a Table</a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        
+        <!-- <div class="d-flex justify-content-between align-items-center">
+          <h2>Sample Inner Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Sample Inner Page</li>
+          </ol>
+        </div> -->
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <section class="sample-page">
+      <div class="container" data-aos="fade-up">
+
+        {% block content %}
+
+        {% endblock %}
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              123 Rosie Street <br>
+              Sometown <br>
+              Co. Meath<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Reservations</h4>
+            <p>
+              <strong>Phone:</strong> +353 1 555 9257<br>
+              <strong>Email:</strong> info@saoirsesburgers.com<br>
+            </p>
           </div>
         </div>
-      </div>
-    </nav>
 
-    
-    <main class="flex-shrink-0 main-bg">
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-    </main>
-
-    <!-- Footer -->
-    <div class="container my-5">
-
-        <footer class="text-white text-center text-lg-start" style="background-color: #23242a;">
-          <!-- Grid container -->
-          <div class="container p-4">
-            <!--Grid row-->
-            <div class="row mt-4">
-              <!--Grid column-->
-
-              <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Opening hours</h5>
-      
-                <table class="table text-center text-white">
-                  <tbody class="font-weight-normal">
-                    <tr>
-                      <td>Mon - Fri:</td>
-                      <td>5pm - 11pm</td>
-                    </tr>
-                    <tr>
-                      <td>Sat - Sun:</td>
-                      <td>12pm - 12am</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!--Grid column-->
-            </div>
-
-              <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase mb-4">Contact Us</h5>
-                 
-                <div class="mt-4">
-                  Phone: 01 555 1234
-                  Email Address: info@saoirsesburgers.ie
-                  <div class="mt-4">
-                    <!-- Facebook -->
-                    <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-facebook-f"></i></a>
-                    <!-- Twitter -->
-                    <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-twitter"></i></a>
-                    <!-- Instagram -->
-                    <a type="button" class="btn btn-floating btn-warning btn-lg"><i class="fab fa-instagram-f"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!--Grid column-->                    
-              </div>
-              <!--Grid column-->
-            </div>
-            <!--Grid row-->
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sun: </strong>12PM - 11PM<br>
+            </p>
           </div>
-          <!-- Grid container -->
-      
-          <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2022 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="http://www.twitter.com" target="_blank" rel="noopener"
+            aria-label="Follow us on Twitter (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="http://www.facebook.com" target="_blank" rel="noopener"
+            aria-label="Follow us on Facebook (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="http://www.instagram.com" target="_blank" rel="noopener"
+            aria-label="Follow us on Instagram (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
           </div>
-          <!-- Copyright -->
-        </footer>
-        
+        </div>
+
       </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Saoirse's Burgers</span></strong>. All Rights Reserved
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
 </body>
 
 </html>
