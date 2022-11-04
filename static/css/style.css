@@ -1710,12 +1710,12 @@ section {
 /* From CI "I Think Therefore I Blog" Walkthrough */
 
 .btn-signup {
-  background-color: #23BBBB;
+  background-color:rgba(206, 18, 18, 0.8);
   color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
   background-color: #fff;
-  color: #23BBBB;
+  color: rgba(206, 18, 18, 0.8);
 }
