@@ -36,3 +36,13 @@ class BookPage(generic.DetailView):
 
     def get(self, request):
         return render(request, 'book.html')
+
+
+class MyBookings(generic.DetailView):
+    """
+    Renders Booking Page View
+    """
+    template_name = "my_bookings.html"
+
+    def get(self, request):
+        return render(request, 'my_bookings.html')
