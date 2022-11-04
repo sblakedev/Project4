@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views import generic
 from .models import Booking, CreateAccount
 
@@ -6,15 +6,11 @@ from .models import Booking, CreateAccount
 # Create your views here.
 
 
-class HomePage(generic.DetailView):
+def HomePage(request):
     """
     Renders Home Page View
     """
-
-    template_name = "index.html"
-
-    def get(self, request):
-        return render(request, 'index.html')
+    return render(request, 'index.html')
 
 
 class LogInPage(generic.DetailView):
@@ -26,21 +22,17 @@ class LogInPage(generic.DetailView):
         return render(request, 'log_in.html')
 
 
-class BookPage(generic.DetailView):
+def BookPage(request):
     """
     Renders Booking Page View
     """
-    model = Booking
-    queryset = Booking.objects.all()
-    template_name = 'book.html'
 
-    def get(self, request):
-        return render(request, 'book.html')
+    return render(request, 'book.html')
 
 
 class MyBookings(generic.DetailView):
     """
-    Renders Booking Page View
+    Renders My Booking Page View
     """
     template_name = "my_bookings.html"
 
