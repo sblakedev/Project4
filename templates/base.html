@@ -51,23 +51,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'home' %}#about">About</a></li>
-          <li><a href="{% url 'home' %}#menu">Menu</a></li>
-          <li><a href="{% url 'home' %}#events">Events</a></li>
-          <li><a href="{% url 'home' %}#chefs">Chefs</a></li>
-          <li><a href="{% url 'home' %}#gallery">Gallery</a></li>
-          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+          <li><a href="{% url 'HomePage' %}">Home</a></li>
+          <li><a href="{% url 'HomePage' %}#about">About</a></li>
+          <li><a href="{% url 'HomePage' %}#menu">Menu</a></li>
+          <li><a href="{% url 'HomePage' %}#events">Events</a></li>
+          <li><a href="{% url 'HomePage' %}#chefs">Chefs</a></li>
+          <li><a href="{% url 'HomePage %}#contact">Contact</a></li>
 
           <li><a href="{% url 'account_logout' %}">Logout</a></li>
-          <li><a href="{% url 'mybookings_page' %}">My Bookings</a></li>
+          <li><a href="{% url 'BookPage' %}">My Bookings</a></li>
 
           <li><a href="{% url 'create_account' %}">Create Account</a></li>
-          <li><a href="{% url 'account_login' %}">Login</a></li>
+          <li><a href="{% url 'LogInPage' %}">Login</a></li>
         </ul>
       </nav><!-- .navbar -->
 
-      <a class="btn-book-a-table" href="{% 'book' %}">Book a Table</a>
+      <a class="btn-book-a-table" href="{% url 'BookPage' %}">Book a Table</a>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
