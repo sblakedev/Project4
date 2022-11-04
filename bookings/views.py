@@ -11,37 +11,10 @@ class HomePage(generic.DetailView):
     Renders Home Page View
     """
 
-    template_name = "home.html"
+    template_name = "index.html"
 
     def get(self, request):
-        return render(request, 'home.html')
-
-
-class MenuPage(generic.DetailView):
-    """
-    Renders Menu Page View
-    """
-
-    def get(self, request):
-        return render(request, 'menu.html')
-
-
-class ContactPage(generic.DetailView):
-    """
-    Renders Contact Page View
-    """
-
-    def get(self, request):
-        return render(request, 'contact.html')
-
-
-class AboutPage(generic.DetailView):
-    """
-    Renders the About Page
-    """
-
-    def get(self, request):
-        return render(request, 'about.html')
+        return render(request, 'index.html')
 
 
 class LogInPage(generic.DetailView):
