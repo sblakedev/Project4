@@ -1702,3 +1702,20 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# Sign Up
+--------------------------------------------------------------*/
+
+/* From CI "I Think Therefore I Blog" Walkthrough */
+
+.btn-signup {
+  background-color: #23BBBB;
+  color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+  background-color: #fff;
+  color: #23BBBB;
+}
