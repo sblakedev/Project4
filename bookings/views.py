@@ -1,6 +1,7 @@
 from django.shortcuts import render, reverse
 from django.views import generic
 from .models import Booking, CreateAccount
+from .forms import BookingForm
 
 
 # Create your views here.
@@ -22,12 +23,29 @@ class LogInPage(generic.DetailView):
         return render(request, 'log_in.html')
 
 
-def BookPage(request):
+class BookPage(request):
     """
     Renders Booking Page View
     """
+    template_name = 'book.html'
+    form_class = BookingForm
+    
+    def booking_view(self, request):
+        return render(request, 'book.html')
+    
+    def post(self, request):
+        
+        form = BookingForm(data=request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+        
+        return render(request, 'index.html')
+    
 
-    return render(request, 'book.html')
+
+
 
 
 class MyBookings(generic.DetailView):
