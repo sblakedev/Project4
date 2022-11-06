@@ -1,6 +1,11 @@
 from django import forms
 from django.forms import ModelForm
-from .models import CreateAccount
+from .models import CreateAccount, Booking
+
+class DateInput(forms.DateInput):
+    
+    input_type = 'date'
+
 
 class BookingForm(forms.ModelForm):
     name = forms.CharField(
@@ -17,12 +22,12 @@ class BookingForm(forms.ModelForm):
     
     phone = forms.CharField(
         label='Phone Number',
-        required = True,
+        required=True,
         widget=forms.TextInput(attrs={'placeholder': 'Phone Number'})
     )
     
     class Meta:
-        model = BookingForm
+        model = Booking
         fields = '__all__'
         exclude = ('user', )
         widgets = {

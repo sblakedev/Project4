@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse
 from django.views import generic
+from django.views.generic.edit import FormView
 from .models import Booking, CreateAccount
 from .forms import BookingForm
 
@@ -23,7 +24,7 @@ class LogInPage(generic.DetailView):
         return render(request, 'log_in.html')
 
 
-class BookPage(request):
+class BookPage(FormView):
     """
     Renders Booking Page View
     """
@@ -42,10 +43,6 @@ class BookPage(request):
             booking.save()
         
         return render(request, 'index.html')
-    
-
-
-
 
 
 class MyBookings(generic.DetailView):
