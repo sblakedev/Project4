@@ -52,6 +52,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}#about">About</a></li>
+          <li><a href="{% url 'home' %}#menu">Menu</a></li>
+          <li><a href="{% url 'home' %}#events">Events</a></li>
+          <li><a href="{% url 'home' %}#chefs">Chefs</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+
           {% if user.is_authenticated %}
           <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -64,12 +70,6 @@
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
           </li>
           {% endif %}
-
-          <li><a href="{% url 'home' %}#about">About</a></li>
-          <li><a href="{% url 'home' %}#menu">Menu</a></li>
-          <li><a href="{% url 'home' %}#events">Events</a></li>
-          <li><a href="{% url 'home' %}#chefs">Chefs</a></li>
-          <li><a href="{% url 'home' %}#contact">Contact</a></li>
 
           <li><a href="#">My Bookings</a></li>
 
