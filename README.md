@@ -6,22 +6,37 @@ Deployed Saoirse's Kitchen App Link
 Github Repo Link
 
 ### Table of Contents
-* [Responsive Mockup](https://github.com/sblakedev/Project-3/blob/main/README.md#responsive-mockup)
+* [Responsive Mockup]()
 * [Overview](https://github.com/sblakedev/Project4)
-Concept
-Site Goals
-Strategy
-Scope
-Structure
-Skeleton
-Surface
-Planning
-Features
-Resources
-Bugs
-Testing
-Deployment
-Credits
+* [User Experience](https://github.com/sblakedev/Project4#user-experience)
+    * [Site Goals](https://github.com/sblakedev/Project4#site-goals)
+    * [Agile Workflow](https://github.com/sblakedev/Project4#agile-workflow)
+    * [Design](https://github.com/sblakedev/Project4#design)
+* [Features](https://github.com/sblakedev/Project4#features)
+    * [Navbar](https://github.com/sblakedev/Project4#navbar)
+    * [Hero](https://github.com/sblakedev/Project4#hero-section)
+    * [About](https://github.com/sblakedev/Project4#about-section)
+    * [Menu](https://github.com/sblakedev/Project4#menu-section)
+    * [Testimonials](https://github.com/sblakedev/Project4#testimonials-section)
+    * [Staff](https://github.com/sblakedev/Project4#staff-section)
+    * [Gallery](https://github.com/sblakedev/Project4#gallery)
+    * [Contact](https://github.com/sblakedev/Project4#contact)
+    * [Footer](https://github.com/sblakedev/Project4#footer)
+    * [Account Sign Up](https://github.com/sblakedev/Project4#account-sign-up)
+    * [Login](https://github.com/sblakedev/Project4#login)
+    * [Booking Page](https://github.com/sblakedev/Project4#booking-page)
+    * [My Bookings](https://github.com/sblakedev/Project4#my-bookings)
+    * [Delete Booking](https://github.com/sblakedev/Project4#delete-booking)
+* [Technologies Used](https://github.com/sblakedev/Project4#technologies-used)
+    * [Languages](https://github.com/sblakedev/Project4#languages)
+    * [Frameworks, Libraries & Programs Used](https://github.com/sblakedev/Project4#frameworks-libraries--programs-used)
+* [Testing](https://github.com/sblakedev/Project4#testing)
+* [Deployment](https://github.com/sblakedev/Project4#deployment)
+* [Credits](https://github.com/sblakedev/Project4#credits)
+    * [Code](https://github.com/sblakedev/Project4#code)
+    * [Content](https://github.com/sblakedev/Project4#content)
+    * [Acknowledgements](https://github.com/sblakedev/Project4#acknowledgements)
+
 
 Username = admin
 email address = admin@saoirsesburgers.ie
