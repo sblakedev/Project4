@@ -16,28 +16,22 @@ def home(request):
     return render(request, 'index.html')
 
 
-def BookPage(request):
+def book_page(request):
     """
     Renders Booking Page View
     """
-    template_name = 'book.html'
-    form_class = BookingForm
-
-    def booking_view(self, request):
-        return render(request, 'book.html')
-
-    def post(self, request):
-
+    if request.method == 'POST':
         form = BookingForm(data=request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
+            return redirect('my_bookings')
 
         return render(request, 'my_bookings.html')
 
 
-class MyBookings(generic.DetailView):
+def my_bookings(request):
     """
     Renders My Booking Page View
     """
