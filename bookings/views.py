@@ -28,7 +28,12 @@ def book_page(request):
             booking.save()
             return redirect('my_bookings')
 
-        return render(request, 'my_bookings.html')
+    form = BookingForm()
+    context = {
+        'form': BookingForm
+    }
+
+    return render(request, 'book.html')
 
 
 def my_bookings(request):
