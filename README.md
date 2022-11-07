@@ -143,6 +143,21 @@ Bugs
 After creating models, I can't see the email field when creating a new booking in the admin panel.
 
 Deployment
+Heroku
+1. Log in to Heroku
+2. On the dashboard, under user profile, click New and Create New App
+3. Name app and set region to Europe. Click Create App
+4. Click on the settings tab
+5. Click on Reveal Config Vars and enter the following:
+6. PORT for the key and 8000 for the value and click Add.
+7. Then enter CLOUDINARY_URL, DATABASE_URL, and SECRET_KEY and their values.
+8. Go back to the top of the page and click on the Deploy tab
+9. Scroll down to Deployment method and choose GitHub
+10. Search for the repository that you want to connect to
+11. Click Connect beside the repository you want to connect to
+12. Scroll down to Automatic Deploys
+13. Under Choose a branch to deploy, choose Main
+14. Click Enable Automatic Deploys
 
 Credits
 Code
