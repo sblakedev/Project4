@@ -113,5 +113,49 @@ This page shows the user's current booking. From here, the user can edit or dele
 Delete Booking
 When the user clicks the Delete button, a warning message will appear so that the user can confirm if they want to delete the booking or not.
 
+Technologies Used
+Languages
+Python
+Javascript
+HTML5
+CSS3
+
+Frameworks, Libraries & Programs Used
+os
+Django
+Allauth
+Cloudinary
+Gunicorn
+Psycopg2
+
+Bootstrap
+Used to design the front end
+Google Fonts
+Used to choose the fonts
+Balsamic
+Used to create wireframes
+LucidCharts
+Used to create the database schema
+
+Testing
+
 Bugs
 After creating models, I can't see the email field when creating a new booking in the admin panel.
+
+Deployment
+
+Credits
+Code
+Yummy Bootstrap Theme was the theme used for this site
+Django Documentation was used to understand and implement code and functionality
+Code Institute Walkthroughs for "Hello Django" and "I Think Therefore I Blog" were used for code examples and guidance
+
+Content
+Media
+Some images came from the Yummy Bootstrap Theme
+Other images came from the Feane Bootstrap Theme
+
+Acknowledgments
+My mentor Martina Terlevic for fantastic guidance and support.
+The Slack community
+Inspiration for the ReadMe came from the Code Institute Sample ReadMe, Code Institute ReadMe template, my own Project 1, 2 and 3 ReadMe's and ErikHgm's Firehouse Restaurant Project ReadMe.
