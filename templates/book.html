@@ -12,7 +12,7 @@
         <form method="POST">
           {% csrf_token %}
           {{ form.as_p }}
-          <button class="account-btn" type="submit">Done</button>
+          <button class="account-btn" type="submit">Book</button>
         </form>
         {% else %}
         <p>To make a reservation, please <a href="{% url 'account_login' %}">login</a>. If you have not

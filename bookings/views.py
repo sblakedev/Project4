@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from django.views import generic, View
 from django.views.generic.edit import FormView
@@ -49,9 +49,8 @@ def my_bookings(request):
         context = {
             'bookings': bookings
         }
-        
+
         return render(request, 'my_bookings.html', context)
-    
+
     else:
         return redirect('../accounts/signup')
-

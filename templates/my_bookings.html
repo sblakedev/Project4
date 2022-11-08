@@ -23,11 +23,13 @@
                                     <p class="card-text">Phone: {{ booking.phone }}</p>
                                     <p class="card-text">Email: {{ booking.email_address }}</p>
 
-                                    <a href="/edit_bookings/{{booking.id}}" class="card-link">Edit Booking</a>
+                                    <a href="/ /{{booking.id}}" class="card-link">Edit Booking</a>
                                     <a href="/delete_booking/{{booking.id}}" class="card-link">Delete Booking</a>
                                 </div>
                             </div>
                         </div>
+                        {% empty %}
+                        <p>You have no bookings</p>
                         {% endfor %}
                     </div>
 
