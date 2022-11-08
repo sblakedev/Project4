@@ -1710,15 +1710,20 @@ section {
 /* From CI "I Think Therefore I Blog" Walkthrough */
 
 .btn-signup,
-.btn-signout {
+.btn-signout,
+.account-btn {
   background-color:rgba(206, 18, 18, 0.8);
   color: #fff;
+  border-radius: 50px;
 }
 
 .btn-signup:hover,
 .btn-signup:active,
 .btn-signout:hover,
-.btn-signout:active {
+.btn-signout:active,
+.account-btn:hover,
+.account-btn:active {
   background-color: #fff;
   color: rgba(206, 18, 18, 0.8);
+  border-radius: 50px;
 }
