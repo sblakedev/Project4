@@ -1,4 +1,44 @@
 {% extends "base.html" %}
-{% load static %}
 
 {% block content %}
+<!-- Shows the customer's current bookings -->
+<section>
+    <div class="container height mt-5 pt-5 book">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                {% if user.is_authenticated %}
+                <h3>Manage Bookings</h3>
+
+                <div class="container">
+                    <div class="row">
+                        {% for booking in bookings %}
+                        <div class="col-md-8 card mb4 mt-3">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Weclome back {{ booking.name }}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Here are your current bookings</h6>
+                                    <p class="card-text">Date: {{ booking.booking_date }}</p>
+                                    <p class="card-text">Time: {{ booking.booking_time }}</p>
+                                    <p class="card-text">Number of guests: {{ booking.number_of_guests }}</p>
+                                    <p class="card-text">Phone: {{ booking.phone }}</p>
+                                    <p class="card-text">Email: {{ booking.email_address }}</p>
+
+                                    <a href="/edit_bookings/{{booking.id}}" class="card-link">Edit Booking</a>
+                                    <a href="/delete_booking/{{booking.id}}" class="card-link">Delete Booking</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
+            {% else %}
+            <p>To make a reservation, please <a href="{% url 'account_login' %}">login</a>. If you have not
+                created an account yet, then please <a href="{% url 'account_signup' %}">sign up.</a></p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

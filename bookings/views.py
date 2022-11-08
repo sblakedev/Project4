@@ -1,4 +1,5 @@
 from django.shortcuts import render, reverse
+from django.contrib import messages
 from django.views import generic, View
 from django.views.generic.edit import FormView
 from .models import Booking, CreateAccount
@@ -26,13 +27,16 @@ def book_page(request):
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
+            messages.success(request, 'Booking is confirmed')
             return redirect('my_bookings')
+        else:
+            messages.error(
+                request, 'Invalid, incorrect info or double booking')
 
     form = BookingForm()
     context = {
-        'form': BookingForm
+        'form': form
     }
-
     return render(request, 'book.html', context)
 
 
@@ -40,7 +44,14 @@ def my_bookings(request):
     """
     Renders My Booking Page View
     """
-    template_name = "my_bookings.html"
+    if request.user.is_authenticated:
+        bookings = Booking.objects.filter(user=request.user)
+        context = {
+            'bookings': bookings
+        }
+        
+        return render(request, 'my_bookings.html', context)
+    
+    else:
+        return redirect('../accounts/signup')
 
-    def get(self, request):
-        return render(request, 'my_bookings.html')

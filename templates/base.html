@@ -62,6 +62,7 @@
           <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
           </li>
+          <li><a href="{% url 'my_bookings' %}">My Bookings</a></li>
           {% else %}
           <li class="nav-item">
               <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
@@ -70,8 +71,6 @@
               <a class="nav-link" href="{% url 'account_login' %}">Login</a>
           </li>
           {% endif %}
-
-          <li><a href="#">My Bookings</a></li>
 
           <li><a href="#">Create Account</a></li>
         </ul>

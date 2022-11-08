@@ -1,10 +1,14 @@
 from django import forms
 from django.forms import ModelForm
+from django.forms.widgets import DateInput
 from .models import CreateAccount, Booking
 
 
 class DateInput(forms.DateInput):
-
+    """This class provides a widget that the user can
+    click on. It cretes a better UX when choosing the date
+    for the booking.
+    """
     input_type = 'date'
 
 
@@ -29,8 +33,7 @@ class BookingForm(forms.ModelForm):
 
     class Meta:
         model = Booking
-        fields = '__all__'
         exclude = ('user', )
         widgets = {
-            'date': DateInput()
+            'date': DateInput(),
         }
