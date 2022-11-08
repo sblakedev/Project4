@@ -1,16 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% load crispy_forms_tags %}
+<!-- The booking form that is used to make a booking -->
+<section>
+  <div class="container height mt-5 pt-5">
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+        {% if user.is_authenticated %}
+        <h3>Make your Booking</h3>
 
-{% if user.is_authenticated %}
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-
-    {{ form | crispy }}
-
-    <button class="btn btn-dark mb-2 mt-3" type="submit">Submit Booking Interest</button>
-</form>
-
-{% endif %}
+        <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="account-btn" type="submit">Done</button>
+        </form>
+        {% else %}
+        <p>To make a reservation, please <a href="{% url 'account_login' %}">login</a>. If you have not
+          created an account yet, then please <a href="{% url 'account_signup' %}">sign up.</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock %}

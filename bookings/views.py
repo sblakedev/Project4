@@ -33,7 +33,7 @@ def book_page(request):
         'form': BookingForm
     }
 
-    return render(request, 'book.html')
+    return render(request, 'book.html', context)
 
 
 def my_bookings(request):
