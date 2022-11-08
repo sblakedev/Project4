@@ -18,7 +18,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -37,20 +39,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<!-- ======= Message Alert Bar. Credit: CI walkthrough ======= -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      {% for message in messages %}
-      <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-        {{ message | safe }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-        </button>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
 
 <body>
 
@@ -59,7 +47,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        
+
         <h1>Saoirse's Burgers<span>.</span></h1>
       </a>
 
@@ -74,15 +62,15 @@
 
           {% if user.is_authenticated %}
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
           </li>
           <li><a href="{% url 'my_bookings' %}">My Bookings</a></li>
           {% else %}
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
           </li>
           {% endif %}
 
@@ -98,9 +86,23 @@
   </header><!-- End Header -->
 
   <main id="main">
-  
+
     <section class="sample-page">
       <div class="container" data-aos="fade-up">
+
+        <!-- ======= Message Alert Bar. Credit: CI walkthrough ======= -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2">
+              {% for message in messages %}
+              <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
 
         {% block content %}
 
@@ -154,11 +156,13 @@
           <h4>Follow Us</h4>
           <div class="social-links d-flex">
             <a href="http://www.twitter.com" target="_blank" rel="noopener"
-            aria-label="Follow us on Twitter (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
+              aria-label="Follow us on Twitter (opens in a new tab)" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="http://www.facebook.com" target="_blank" rel="noopener"
-            aria-label="Follow us on Facebook (opens in a new tab)" class="facebook"><i class="bi bi-facebook"></i></a>
+              aria-label="Follow us on Facebook (opens in a new tab)" class="facebook"><i
+                class="bi bi-facebook"></i></a>
             <a href="http://www.instagram.com" target="_blank" rel="noopener"
-            aria-label="Follow us on Instagram (opens in a new tab)" class="instagram"><i class="bi bi-instagram"></i></a>
+              aria-label="Follow us on Instagram (opens in a new tab)" class="instagram"><i
+                class="bi bi-instagram"></i></a>
           </div>
         </div>
 
@@ -173,7 +177,8 @@
 
   </footer><!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
@@ -184,6 +189,13 @@
   <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
   <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
   <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+  <script>
+    setTimeout(function () {
+        let messages = document.getElementById('msg');
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+    }, 3000);
+  </script>
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js' %}"></script>
