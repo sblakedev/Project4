@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import Booking, CreateAccount
+from .models import Booking
 
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     model = Booking
-    list_display = ('name', 'email_address', 'phone')
-
-
-@admin.register(CreateAccount)
-class CreateAccountAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email_address', 'phone_number')
+    list_display = ('name', 'email_address', 'phone', 'booking_date',
+                    'booking_time', 'no_of_guests', 'booking_event')
+    list_filter = ('name', 'booking_date')
