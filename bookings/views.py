@@ -2,7 +2,7 @@ from django.shortcuts import render, reverse, redirect
 from django.contrib import messages
 from django.views import generic, View
 from django.views.generic.edit import FormView
-from .models import Booking, CreateAccount
+from .models import Booking
 from .forms import BookingForm
 
 
@@ -22,7 +22,7 @@ def book_page(request):
     Renders Booking Page View
     """
     if request.method == 'POST':
-        form = BookingForm(data=request.POST)
+        form = BookingForm(request.POST, request.FILES)
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
@@ -30,14 +30,14 @@ def book_page(request):
             messages.success(request, 'Booking is confirmed')
             return redirect('my_bookings')
         else:
-            # messages.error(
-            #     request, 'Invalid, incorrect info or double booking')
-            print(form.errors.as_data())
+            messages.error(
+                request, 'Invalid, incorrect info or double booking')
 
     form = BookingForm()
     context = {
         'form': form
     }
+
     return render(request, 'book.html', context)
 
 
