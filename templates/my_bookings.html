@@ -6,7 +6,6 @@
     <div class="container height mt-5 pt-5 book">
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
-                {% if user.is_authenticated %}
                 <h3>Manage Bookings</h3>
 
                 <div class="container">
@@ -36,10 +35,6 @@
                 </div>
             </div>
 
-            {% else %}
-            <p>To make a reservation, please <a href="{% url 'account_login' %}">login</a>. If you have not
-                created an account yet, then please <a href="{% url 'account_signup' %}">sign up.</a></p>
-            {% endif %}
         </div>
     </div>
 </section>
