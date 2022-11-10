@@ -55,3 +55,24 @@ def my_bookings(request):
 
     else:
         return redirect('../accounts/signup')
+
+    
+def edit_bookings(request):
+    booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            booking.save()
+            messages.success(request, 'Your booking has been updated')
+            return redirect('my_bookings')
+        else:
+            messages.error(
+                request, 'Invalid, incorrect info or double booking')
+
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form
+    }
+
+    return render(request, 'edit_booking.html', context)
