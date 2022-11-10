@@ -1,4 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
+{% block content %}
+
+<section>
+    <div class="container height mt-5 pt-5 book">
+      <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+          <h3>Edit Booking</h3>
+  
+          <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button class="account-btn" type="submit">Submit Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 {% block content %}
