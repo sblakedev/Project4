@@ -90,45 +90,60 @@ The database design is seen below. The Booking model has a relationship with the
 
 ### Features
 #### Navbar
+![Navbar](static/img/readme/NavBar.png)
 The navbar shows all of the sections of the site at first glance. By clicking on one of the tabs, it will take the user further down the page to the corresponding section.
 
 #### Hero Section
+![HeroSection](static/img/readme/HeroSection.png)
 The hero section clearly shows the type of food on offer at this estabishment and features a button to Book a Table.
 
 #### About Section
+![AboutSection](static/img/readme/AboutSection.png)
 The about section allows the user to learn more about the restaurant, when it was established, what their mission is. It also provides the phone number to call to book a table.
 
 #### Menu Section
+![MenuSection](static/img/readme/MenuSection.png)
 The menu section shows all of the dishes on offer. There are Burgers, Fries, Drinks and Desserts tabs which when clicked show what's available in each category. The ingredients used in each dish are underneath the name and is followed by the price, so that users have all the information available to them before they decide to book a table.
 
 #### Testimonials Section
+![TestimonialsSection](static/img/readme/TestimonialsSection.png)
 The testimonials section features quotes from people who have eaten at the restautant before so that users can see other opinions before they decide to book a table.
 
 #### Staff Section
+![StaffSection](static/img/readme/StaffSection.png)
 The staff section features pictures of 3 main staff in the restaurant. This means that users can feel like they know a bit more about the staff and what their values are. This may make the user feel more comfortable in the restaurant.
 
 #### Gallery
+![GallerySection](static/img/readme/GallerySection.png)
 The gallery section features some photos of the restaurant. Again, this helps the user feel like they know the restaurant before they've ever been there and may help them feel morea comfortable.
 
 #### Contact
+![ContactSection](static/img/readme/ContactSection.png)
 The contact section features the address, email address, phone number and opening hours of the restaurant.
 
 #### Footer
+![FooterSection](static/img/readme/FooterSection.png)
 The footer section features the contact information again and also links to social media. These links open the homepage of those sites in a new tab.
 
 #### Account Sign Up
+![SignUpPage](static/img/readme/SignUpPage.png)
 The account sign up section features a form that the user can fill in in order to create an account.
 
 #### Login
+![LoginPage](static/img/readme/SignInPage.png)
 The login section allows the user to log in.
 
 #### Booking Page
+![BookPage](static/img/readme/BookPage.png)
 The booking page allows the user to create a booking using the form. This will then appear in the user's My Bookings page
 
 #### My Bookings
-This page shows the user's current booking. From here, the user can edit or delete a booking by clicking on the corresponding button.
+![MyBookings](static/img/readme/MyBookings_NoBookings.png)
+This page shows the user's current booking or no bookings if they havenot booked a table yet. From here, the user can edit or delete a booking by clicking on the corresponding button.
+
 
 #### Delete Booking
+![DeleteBookingPage]()
 When the user clicks the Delete button, a warning message will appear so that the user can confirm if they want to delete the booking or not.
 
 ### Technologies Used
