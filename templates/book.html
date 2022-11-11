@@ -9,7 +9,7 @@
         {% if user.is_authenticated %}
         <h3>Book A Table</h3>
 
-        <form action="{% url 'add_book' %}" method="POST">
+        <form action="" method="POST">
           {% csrf_token %}
           {{ form.as_p }}
           <button class="account-btn" type="submit">Book</button>
