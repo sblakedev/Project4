@@ -1,7 +1,5 @@
-Testing
-
+# Testing
 I carried out testing on all elements and pages on the Saoirse's Burgers website.
-
 
 #### Navbar
 The Navbar has links for Home, About, Menu, Events, Chefs, Contact, Register, Login and Book A Table
@@ -67,3 +65,14 @@ The Navbar has links for Home, About, Menu, Events, Chefs, Contact, Register, Lo
 | - | - | - | - |
 | Logout Link in Navbar when user is signed in | Click the Logout Link | User will be taken to the Sign Out Page | PASS |
 | Sign Out Button | Click Sign Out Button | User will be redirected to the home page and will see a message 'You have been signed out' | PASS |
+
+## Code Validation
+
+* [W3C Markup Validator](https://validator.w3.org/nu/) 
+    No relevant errors
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    No relevant errors
+
+* [Python Validator](https://extendsclass.com/python-tester.html#:~:text=To%20check%20your%20code%2C%20you,use%20this%20python%20checker%20tool.)
+    No relevant errors

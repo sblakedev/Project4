@@ -6,7 +6,7 @@ Deployed Saoirse's Kitchen App Link
 Github Repo Link
 
 ### Table of Contents
-* [Responsive Mockup]()
+* [Responsive Mockup](/static/img/readme/ResponsiveMockup.png)
 * [Overview](https://github.com/sblakedev/Project4)
 * [User Experience](https://github.com/sblakedev/Project4#user-experience)
     * [Site Goals](https://github.com/sblakedev/Project4#site-goals)
@@ -37,10 +37,6 @@ Github Repo Link
     * [Content](https://github.com/sblakedev/Project4#content)
     * [Acknowledgements](https://github.com/sblakedev/Project4#acknowledgements)
 
-
-Username = admin
-email address = admin@saoirsesburgers.ie
-password = cheese2658
 
 
 ### Overview
@@ -87,7 +83,8 @@ Images used show tasty, fresh burgers to show users what the main dish is.
 Wireframes can be found [here](documents/wireframes.md)
 
 * Database Schema
-The database design is seen below. The Booking model has a relationship with the built-in Django model of User through the foreign key
+The database design is seen below. The Booking model has a relationship with the built-in Django model of User through the foreign key.
+![DataBaseSchema](/static/img/readme/DatabaseSchema.png) 
 
 ### Features
 #### Navbar
@@ -210,6 +207,7 @@ Some images came from the Yummy Bootstrap Theme
 Other images came from the Feane Bootstrap Theme
 
 #### Acknowledgments
-My mentor Martina Terlevic for fantastic guidance and support.
-The Slack community
-Inspiration for the ReadMe came from the Code Institute Sample ReadMe, Code Institute ReadMe template, my own Project 1, 2 and 3 ReadMe's and ErikHgm's Firehouse Restaurant Project ReadMe.
+* My mentor Martina Terlevic for fantastic guidance and support.
+* The Slack community
+* CI Tutors Josh, James and Alan
+* Inspiration for the ReadMe came from the Code Institute Sample ReadMe, Code Institute ReadMe template, my own Project 1, 2 and 3 ReadMe's and ErikHgm's Firehouse Restaurant Project ReadMe.
