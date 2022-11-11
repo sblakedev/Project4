@@ -1,9 +1,8 @@
 ## Saoirse's Burgers
 
-Mockup of Saoirse's Burgers
 
 Deployed Saoirse's Kitchen App Link
-Github Repo Link
+[Github Repo Link](https://github.com/sblakedev/Project4)
 
 ### Table of Contents
 * [Responsive Mockup](/static/img/readme/ResponsiveMockup.png)
