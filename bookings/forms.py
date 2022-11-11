@@ -9,6 +9,11 @@ class DateInput(forms.DateInput):
     input_type = 'date'
 
 
+class TimePickerInput(forms.TimeInput):
+
+    input_type = 'time'
+
+
 class BookingForm(forms.ModelForm):
     name = forms.CharField(
         label='Name',
@@ -25,13 +30,13 @@ class BookingForm(forms.ModelForm):
     phone = forms.CharField(
         label='Phone Number',
         required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Phone Number'})
+        widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}),
     )
-
+    
     class Meta:
         model = Booking
 
         exclude = ('user', )
         widgets = {
-            'booking_date': DateInput()
+            'booking_date': DateInput(),
         }

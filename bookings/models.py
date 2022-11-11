@@ -5,27 +5,27 @@ from cloudinary.models import CloudinaryField
 # Options for bookings
 
 TIME = [
-    ('12:00:00', '12:00:00'),
-    ('12:30:00', '12:30:00'),
-    ('13:00:00', '13:00:00'),
-    ('13:30:00', '13:30:00'),
-    ('14:00:00', '14:00:00'),
-    ('14:30:00', '14:30:00'),
-    ('15:00:00', '15:00:00'),
-    ('15:30:00', '15:30:00'),
-    ('16:00:00', '16:00:00'),
-    ('16:30:00', '16:30:00'),
-    ('17:00:00', '17:00:00'),
-    ('17:30:00', '17:30:00'),
-    ('18:00:00', '18:00:00'),
-    ('18:30:00', '18:30:00'),
-    ('19:00:00', '19:00:00'),
-    ('19:30:00', '19:30:00'),
-    ('20:00:00', '20:00:00'),
-    ('20:30:00', '20:30:00'),
-    ('21:00:00', '21:00:00'),
-    ('21:30:00', '21:30:00'),
-    ('22:00:00', '22:00:00'),
+    ('12:00', '12:00'),
+    ('12:30', '12:30'),
+    ('13:00', '13:00'),
+    ('13:30', '13:30'),
+    ('14:00', '14:00'),
+    ('14:30', '14:30'),
+    ('15:00', '15:00'),
+    ('15:30', '15:30'),
+    ('16:00', '16:00'),
+    ('16:30', '16:30'),
+    ('17:00', '17:00'),
+    ('17:30', '17:30'),
+    ('18:00', '18:00'),
+    ('18:30', '18:30'),
+    ('19:00', '19:00'),
+    ('19:30', '19:30'),
+    ('20:00', '20:00'),
+    ('20:30', '20:30'),
+    ('21:00', '21:00'),
+    ('21:30', '21:30'),
+    ('22:00', '22:00'),
 
 ]
 
@@ -77,7 +77,7 @@ class Booking(models.Model):
     email_address = models.EmailField(null=True, blank=True)
     phone = models.CharField('Phone Number', max_length=15, null=True, blank=False)
     booking_date = models.DateField('Date')
-    booking_time = models.TimeField('Time', choices=TIME, blank=False)
+    booking_time = models.CharField('Time', choices=TIME, max_length=6, blank=False)
     no_of_guests = models.CharField('Number of Guests', max_length=2, choices=NO_OF_GUESTS, blank=False)
     booking_event = models.CharField('Is this a Special Occasion?', max_length=50, choices=EVENT, blank=False)
 
