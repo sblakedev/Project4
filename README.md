@@ -176,6 +176,7 @@ Information on Testing on elements and pages can be seen [here](documents/testin
 
 * Styling Error
     On some screens there is a gap between the footer and bottom of the page. This is currently unresolved.
+    The Events images are the wrong size. They were originally not displaying at all as the filepath couldn't link. I changed the images links but can't get them to display as the correct size within the container. Due to time constraints this bug is currently unresolved.
 
 ### Deployment
 #### Heroku
