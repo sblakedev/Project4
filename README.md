@@ -84,6 +84,7 @@ The font is clear and casual which again, ties in with the relaxed atmosphere of
 Images used show tasty, fresh burgers to show users what the main dish is.
 
 * Wireframes
+Wireframes can be found [here](documents/wireframes.md)
 
 * Database Schema
 The database design is seen below. The Booking model has a relationship with the built-in Django model of User through the foreign key
@@ -139,12 +140,12 @@ The booking page allows the user to create a booking using the form. This will t
 
 #### My Bookings
 ![MyBookings](static/img/readme/MyBookings_NoBookings.png)
+![MyBookings](static/img/readme/MyBookings.png)
 This page shows the user's current booking or no bookings if they havenot booked a table yet. From here, the user can edit or delete a booking by clicking on the corresponding button.
 
+#### Edit Booking
+![EditBookingPage](static/img/readme/Edit Booking.png)
 
-#### Delete Booking
-![DeleteBookingPage]()
-When the user clicks the Delete button, a warning message will appear so that the user can confirm if they want to delete the booking or not.
 
 ### Technologies Used
 #### Languages
@@ -171,9 +172,14 @@ Used to create wireframes
 Used to create the database schema
 
 ### Testing
+Information on Testing on elements and pages can be seen [here](documents/testing.md)
 
 #### Bugs
-After creating models, I can't see the email field when creating a new booking in the admin panel.
+* Booking Form
+    Booking form would not validate. Print errors statement was added to code which showed that the error was coming from the time field. The error said that whatever time was picked was not a valid choice from the list of choices. After much research, and help from 3 CI tutors, I eventually looked through other people's code and found that I should change the time field from models.TimeField to models.CharField. Once this was fixed, the form submitted to the database and the booking appeared in the My Bookings Page.
+
+* Styling Error
+    On some screens there is a gap between the footer and bottom of the page. This is currently unresolved.
 
 ### Deployment
 #### Heroku

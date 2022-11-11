@@ -939,7 +939,7 @@ section {
   font-weight: 500;
   color: var(--color-secondary);
   font-family: var(--font-secondary);
-  font-weight: 30px;
+  font-weight: 30;
   margin-bottom: 5px;
 }
 
@@ -1048,7 +1048,7 @@ section {
 
 .events .event-item {
   background-size: cover;
-  background-position: cente;
+  background-position: center;
   min-height: 600px;
   padding: 30px;
 }
